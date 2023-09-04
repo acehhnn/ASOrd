@@ -9,11 +9,11 @@ An R package for interim analysis with ordinal outcomes.
 if (!require("devtools")){
     install.packages("devtools")
 }
-devtools::install_github("lihualei71/cfcausal")
+devtools::install_github("acehhnn/ASOrd")
 ```
 
 ## Usage
-For more datails, please read the vignette `vignette("introduction", package = "ASOrd")`
+For more datails, please read the vignette (`vignette("introduction", package = "ASOrd")`)
 ```
 # Input data
 data('hold_data') # a built-in data set generated from distributions satisfyting the proportional odds assumption
