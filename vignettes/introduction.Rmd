@@ -1,0 +1,68 @@
+---
+title: "Introduction to ASord"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ASOrd)
+```
+
+# Introduction
+
+This is a package for interim analyses with ordinal outcomes, which serves as a complementary to the package `gsDesign`.
+
+
+# Interim analysis with ordinal outcomes
+
+Assume that the patients in the treatment and control group follows two distinct distributions where the proportional odds assumption holds:
+
+```{r}
+data("hold_data")
+head(hold_data)
+```
+
+To analyze the results for the currently included patients in a clinical trial, execute:
+
+```{r}
+y1 = hold_data[hold_data$group == 1, 1]
+y0 = hold_data[hold_data$group == 0, 1]
+
+K = 3
+
+interim_odds(K, k = 1, y1, y0)
+interim_rank(K, k = 2, y1, y0, A = 6)
+```
+
+
+When the data are generated from the distributions that violate the proportional odds assumption:
+
+```{r}
+data("violate_data")
+head(violate_data)
+```
+
+To analyze the results for the currently included patients in a clinical trial, execute:
+
+```{r}
+y1 = violate_data[violate_data$group == 1, 1]
+y0 = violate_data[violate_data$group == 0, 1]
+
+K = 3
+
+interim_rank(K, k = 2, y1, y0, A = 6)
+```
+
+
+
+
