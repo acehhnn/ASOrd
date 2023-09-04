@@ -13,6 +13,7 @@ devtools::install_github("lihualei71/cfcausal")
 ```
 
 ## Usage
+For more datails, please read the vignette `vignette("introduction", package = "ASOrd")`
 ```
 # Input data
 data('hold_data') # a built-in data set generated from distributions satisfyting the proportional odds assumption
