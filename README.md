@@ -2,7 +2,7 @@
 An R package for interim analysis with ordinal outcomes. 
 
 - `interim_odds()` returns testing results based on proportional odds model approach
-- `interim_rank()` returen testing results based on Wilcoxon rank sum statistics
+- `interim_rank()` returns testing results based on Wilcoxon rank sum statistics
 
 ## Installation
 ```
