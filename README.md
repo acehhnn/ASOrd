@@ -1,4 +1,4 @@
-# ASOrd-package
+# ASOrd
 An R package for interim analysis with ordinal outcomes. 
 
 - `interim_odds()` returns testing results based on proportional odds model approach
